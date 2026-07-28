@@ -102,3 +102,7 @@ SELECT * FROM negocios;
 SELECT * FROM produtos;
 SELECT * FROM alertas;
 SELECT * FROM conversas;
+SHOW DATABASES;
+
+USE marketmind;
+SHOW TABLES;
