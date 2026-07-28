@@ -1,0 +1,14 @@
+# Variáveis de ambiente
+.env
+.env.*
+!.env.example
+
+# Dependências
+node_modules/
+
+# React/Vite
+dist/
+build/
+
+# Logs
+*.log

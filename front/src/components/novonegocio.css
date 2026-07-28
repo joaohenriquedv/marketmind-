@@ -1,0 +1,146 @@
+.nn-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 200;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  animation: nn-fade 0.2s ease;
+}
+
+.nn-modal {
+  background: #fff;
+  width: 420px;
+  max-width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -8px 0 40px rgba(0, 0, 0, 0.15);
+  animation: nn-slide 0.25s ease;
+}
+
+.nn-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 24px 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.nn-modal-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #111;
+  letter-spacing: -0.3px;
+}
+
+.nn-close {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: #aaa;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: color 0.2s, background 0.2s;
+  font-family: inherit;
+}
+.nn-close:hover { color: #111; background: #f5f4f2; }
+
+.nn-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.nn-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.nn-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #333;
+}
+.nn-label span { color: #f47421; }
+
+.nn-input {
+  border: 1.5px solid #e5e3e0;
+  border-radius: 10px;
+  padding: 11px 14px;
+  font-size: 0.88rem;
+  color: #333;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  background: #fff;
+}
+.nn-input::placeholder { color: #bbb; }
+.nn-input:focus {
+  border-color: #f47421;
+  box-shadow: 0 0 0 3px rgba(244, 116, 33, 0.1);
+}
+
+.nn-row {
+  display: flex;
+  gap: 12px;
+}
+.nn-row .nn-field-group { flex: 1; }
+
+.nn-footer {
+  padding: 16px 24px 24px;
+  border-top: 1px solid #eee;
+}
+
+.nn-btn-salvar {
+  width: 100%;
+  padding: 14px;
+  background: #f47421;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+}
+.nn-btn-salvar:hover {
+  background: #e0641a;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(244, 116, 33, 0.3);
+}
+
+@keyframes nn-fade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes nn-slide {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(0); }
+}
+
+/* ── Mensagem de erro — adicione isso no final do novonegocio.css ── */
+.nn-erro-box {
+  background: #fef1f0;
+  border: 1px solid #f8c5c1;
+  color: #c0392b;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+.nn-btn-salvar:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
